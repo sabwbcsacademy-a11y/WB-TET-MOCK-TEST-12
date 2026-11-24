@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MM TET ACADEMY 9732974125 ONLINE WBTET MOCK TEST 12</title>
+  <style>
+    :root {
+      --bg-color: #f4f7f6;
+      --card-bg: #ffffff;
+      --primary: #2c3e50;
+      --accent: #2980b9;
+      --correct: #1e7e34;
+      --correct-bg: #d4edda;
+      --wrong: #bd2130;
+      --wrong-bg: #f8d7da;
+      --text: #333333;
+    }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text);
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 20px auto;
+      background: var(--card-bg);
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    header {
+      border-bottom: 2px solid #eee;
+      padding-bottom: 15px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      color: var(--primary);
+      font-size: 24px;
+      margin: 0 0 10px 0;
+    }
+
+    .sub-title {
+      color: #666;
+      font-size: 15px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"], input[type="tel"] {
+      width: 100%;
+      padding: 12px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    .error-msg {
+      color: var(--wrong);
+      font-size: 14px;
+      margin-top: 5px;
+      display: none;
+    }
+
+    #timer-sticky {
+      position: sticky;
+      top: 10px;
+      background: #fff3cd;
+      color: #856404;
+      border: 1px solid #ffeeba;
+      padding: 12px;
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+      border-radius: 6px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      z-index: 100;
+    }
+
+    .question-card {
+      background: #fafafa;
+      border: 1px solid #e0e0e0;
+      padding: 18px;
+      margin-bottom: 20px;
+      border-radius: 6px;
+    }
+
+    .question-title {
+      font-weight: 600;
+      font-size: 17px;
+      margin-bottom: 12px;
+      color: #2c3e50;
+    }
+
+    .options-list {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .options-list li {
+      margin-bottom: 10px;
+    }
+
+    .options-list label {
+      font-weight: normal;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      padding: 10px 14px;
+      border-radius: 4px;
+      background: #fff;
+      border: 1px solid #ddd;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .options-list label:hover {
+      background: #eef5f9;
+    }
+
+    .options-list input[type="radio"] {
+      margin-right: 12px;
+      transform: scale(1.1);
+    }
+
+    /* Score Highlighting */
+    .opt-correct {
+      background-color: var(--correct-bg) !important;
+      color: var(--correct) !important;
+      border-color: #c3e6cb !important;
+      font-weight: bold !important;
+    }
+
+    .opt-wrong {
+      background-color: var(--wrong-bg) !important;
+      color: var(--wrong) !important;
+      border-color: #f5c6cb !important;
+      font-weight: bold !important;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 14px;
+      background-color: var(--accent);
+      color: #fff;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #1a5276;
+    }
+
+    #result-box {
+      display: none;
+      background: #e8f8f5;
+      border: 1px solid #a3e4d7;
+      padding: 20px;
+      border-radius: 6px;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    #result-box h2 {
+      margin-top: 0;
+      color: #117a65;
+    }
+
+    #score-text {
+      font-size: 22px;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <h1>MM TET ACADEMY 9732974125 ONLINE WBTET MOCK TEST 12</h1>
+    <div class="sub-title">Total Questions: 50 | Time: 40 Minutes | Correct: +1 | Negative Marks: None</div>
+  </header>
+
+  <!-- Login/Registration Section -->
+  <div id="login-section">
+    <div class="form-group">
+      <label for="student-name">Full Name (সম্পূর্ণ নাম) *</label>
+      <input type="text" id="student-name" placeholder="Enter full name in English or Bengali" required>
+      <div id="name-error" class="error-msg">invalid input</div>
+    </div>
+    <div class="form-group">
+      <label for="student-phone">Mobile Number (মোবাইল নম্বর) *</label>
+      <input type="tel" id="student-phone" placeholder="Enter 10-digit mobile number" maxlength="10" required>
+      <div id="phone-error" class="error-msg">invalid number</div>
+    </div>
+    <button class="btn" onclick="validateAndStart()">Login & Start Test</button>
+  </div>
+
+  <!-- Test Section -->
+  <div id="test-section" style="display: none;">
+    <div id="timer-sticky">Time Left: <span id="time-display">40:00</span></div>
+    
+    <form id="quiz-form">
+      <div id="questions-container"></div>
+      <button type="button" class="btn" onclick="submitTest()">Submit Test</button>
+    </form>
+  </div>
+
+  <!-- Result Banner -->
+  <div id="result-box">
+    <h2>Test Completed Successfully!</h2>
+    <div id="score-text"></div>
+    <p>Scroll down to preview your answer sheet: <span style="color:var(--correct); font-weight:bold;">Green</span> indicates correct answers, and <span style="color:var(--wrong); font-weight:bold;">Red</span> highlights incorrect attempts.</p>
+  </div>
+</div>
+
+<script>
+  // Replace with your published Google Apps Script Web App URL
+  const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxCvmhXA3mDAT3k-EBJbYM7Ng7t4EjyPJj_Q2DWIaGbKk7CH5TUOn-h2CBi8zmERDnuxg/exec";
+
+  // 50 Questions Dataset from CTET MOCK TEST 12
+  const questions = [
+    { id: 1, q: "1. বিকাশের ক্ষেত্রে ‘মাথা থেকে পায়ের দিকে’ অগ্রগতির নীতিকে কী বলা হয়?", options: { A: "Proximodistal Principle", B: "Cephalocaudal Principle", C: "General to Specific Principle", D: "Integration Principle" }, ans: "B" },
+    { id: 2, q: "2. শিশুর বিকাশে বংশগতি ও পরিবেশের সম্পর্ক সম্পর্কে কোন বক্তব্যটি সঠিক?", options: { A: "কেবল বংশগতি বিকাশকে নিয়ন্ত্রণ করে", B: "কেবল পরিবেশ বিকাশকে নিয়ন্ত্রণ করে", C: "বংশগতি ও পরিবেশ উভয়ই বিকাশকে প্রভাবিত করে", D: "বংশগতি ও পরিবেশের কোনো ভূমিকা নেই" }, ans: "C" },
+    { id: 3, q: "3. সামাজিকীকরণ প্রক্রিয়ায় বিদ্যালয়ের কোন ভূমিকা সবচেয়ে গুরুত্বপূর্ণ?", options: { A: "কেবল পরীক্ষার প্রস্তুতি দেওয়া", B: "সামাজিক নিয়ম, মূল্যবোধ ও সহযোগিতার মনোভাব গড়ে তোলা", C: "শিশুর ব্যক্তিত্বকে অপরিবর্তিত রাখা", D: "শিশুকে পরিবার থেকে বিচ্ছিন্ন করা" }, ans: "B" },
+    { id: 4, q: "4. শিশুর সামাজিকীকরণে সংস্কৃতির ভূমিকা কী?", options: { A: "আচরণ ও মূল্যবোধের ধরন নির্ধারণে প্রভাব ফেলে", B: "কেবল শারীরিক বৃদ্ধিকে নিয়ন্ত্রণ করে", C: "বুদ্ধিমত্তার মাত্রা স্থির করে", D: "শেখার প্রয়োজনীয়তা কমিয়ে দেয়" }, ans: "A" },
+    { id: 5, q: "5. Thorndike-এর Trial and Error Learning তত্ত্বে কোন সূত্রটি বিশেষভাবে গুরুত্বপূর্ণ?", options: { A: "Law of Effect", B: "Law of Readiness only", C: "Law of Similarity", D: "Law of Association" }, ans: "A" },
+    { id: 6, q: "6. Cognitivism অনুযায়ী শেখার ক্ষেত্রে শিক্ষার্থীর কোন প্রক্রিয়াগুলি গুরুত্বপূর্ণ?", options: { A: "কেবল বাহ্যিক উদ্দীপনা", B: "মনোযোগ, স্মৃতি ও চিন্তন", C: "কেবল শারীরিক অনুশীলন", D: "শাস্তি ও পুরস্কার" }, ans: "B" },
+    { id: 7, q: "7. গঠনবাদী শিক্ষণ পদ্ধতিতে Cognitive Conflict সৃষ্টি হলে শিক্ষার্থীর কী করা উচিত?", options: { A: "পুরোনো ধারণা অন্ধভাবে অনুসরণ করা", B: "নতুন প্রমাণের ভিত্তিতে নিজের ধারণা পুনর্বিবেচনা করা", C: "সমস্যাটি এড়িয়ে যাওয়া", D: "কেবল শিক্ষকের উত্তর মুখস্থ করা" }, ans: "B" },
+    { id: 8, q: "8. পিয়াজের মতে, শিশুর মধ্যে Object Permanence ধারণার বিকাশ কোন পর্যায়ে ঘটে?", options: { A: "Sensorimotor Stage", B: "Pre-operational Stage", C: "Concrete Operational Stage", D: "Formal Operational Stage" }, ans: "A" },
+    { id: 9, q: "9. পিয়াজের তত্ত্বে Assimilation বলতে কী বোঝায়?", options: { A: "পুরোনো ধারণার সঙ্গে সামঞ্জস্য রেখে নতুন অভিজ্ঞতাকে বোঝা", B: "পুরোনো ধারণা সম্পূর্ণ বাদ দেওয়া", C: "অন্যের আচরণ অনুকরণ করা", D: "কেবল তথ্য মুখস্থ করা" }, ans: "A" },
+    { id: 10, q: "10. Vygotsky-র তত্ত্বে Scaffolding বলতে কী বোঝায়?", options: { A: "শিক্ষার্থীকে কোনো সাহায্য না করা", B: "শিক্ষার্থীর প্রয়োজন অনুযায়ী সাময়িক সহায়তা প্রদান", C: "শিক্ষার্থীকে কেবল পরীক্ষা দেওয়ানো", D: "শিক্ষার্থীর কাজ শিক্ষক সম্পূর্ণ করে দেওয়া" }, ans: "B" },
+    { id: 11, q: "11. Vygotsky-র মতে, ভাষা ও চিন্তার সম্পর্ক কী?", options: { A: "ভাষা ও চিন্তা সম্পূর্ণ বিচ্ছিন্ন", B: "ভাষা জ্ঞানীয় বিকাশে গুরুত্বপূর্ণ ভূমিকা পালন করে", C: "চিন্তা কেবল জন্মগত", D: "ভাষার সঙ্গে সামাজিক অভিজ্ঞতার সম্পর্ক নেই" }, ans: "B" },
+    { id: 12, q: "12. Kohlberg-এর নৈতিক বিকাশ তত্ত্বে ‘আইন ও শৃঙ্খলা বজায় রাখা’ কোন পর্যায়ের বৈশিষ্ট্য?", options: { A: "Punishment and Obedience Orientation", B: "Instrumental Orientation", C: "Law and Order Orientation", D: "Universal Ethical Principle" }, ans: "C" },
+    { id: 13, q: "13. Bandura-র Bobo Doll Experiment প্রধানত কোন বিষয়টি প্রতিষ্ঠা করতে সাহায্য করেছিল?", options: { A: "Classical Conditioning", B: "Observational Learning", C: "Trial and Error Learning", D: "Insight Learning" }, ans: "B" },
+    { id: 14, q: "14. Spearman-এর বুদ্ধিমত্তা তত্ত্বে ‘g’ বলতে কী বোঝায়?", options: { A: "General Intelligence", B: "Genetic Intelligence", C: "Group Intelligence", D: "Gifted Intelligence" }, ans: "A" },
+    { id: 15, q: "15. কোনো শিক্ষার্থী নতুন পরিস্থিতিতে দ্রুত যুক্তি প্রয়োগ করে সমস্যার সমাধান করতে পারে। এটি কোন ধরনের বুদ্ধিমত্তার পরিচায়ক?", options: { A: "Crystallized Intelligence", B: "Fluid Intelligence", C: "Musical Intelligence", D: "Bodily-Kinesthetic Intelligence" }, ans: "B" },
+    { id: 16, q: "16. Dyslexia-যুক্ত শিক্ষার্থীর প্রধান অসুবিধা সাধারণত কোন ক্ষেত্রে দেখা যায়?", options: { A: "পড়া ও শব্দ শনাক্তকরণ", B: "শারীরিক ভারসাম্য", C: "শ্রবণশক্তি", D: "দৃষ্টিশক্তি" }, ans: "A" },
+    { id: 17, q: "17. শিক্ষার্থীদের বিভিন্ন শেখার চাহিদা অনুযায়ী পাঠদান পদ্ধতি পরিবর্তন করাকে কী বলা হয়?", options: { A: "Rigid Instruction", B: "Differentiated Instruction", C: "Rote Instruction", D: "Uniform Instruction" }, ans: "B" },
+    { id: 18, q: "18. শিক্ষার্থীদের বাস্তব জীবনের সমস্যার সঙ্গে পাঠ্যবিষয়ের সংযোগ স্থাপন করলে কী বৃদ্ধি পায়?", options: { A: "অর্থপূর্ণ শিখন", B: "যান্ত্রিক মুখস্থকরণ", C: "নিষ্ক্রিয়তা", D: "নির্ভরশীলতা" }, ans: "A" },
+    { id: 19, q: "19. শিক্ষার্থীদের কোনো বিষয় নিয়ে নিজস্ব প্রশ্ন তৈরি করতে উৎসাহিত করা কোন শিক্ষণ পদ্ধতির বৈশিষ্ট্য?", options: { A: "Inquiry-based Learning", B: "Rote Learning", C: "Drill Method", D: "Lecture-only Method" }, ans: "A" },
+    { id: 20, q: "20. শিক্ষার্থীর শেখার দুর্বলতা চিহ্নিত করে তার কারণ নির্ণয়ের জন্য কোন মূল্যায়ন করা হয়?", options: { A: "Summative Assessment", B: "Diagnostic Assessment", C: "Placement Assessment", D: "Norm-referenced Assessment" }, ans: "B" },
+    { id: 21, q: "21. শিক্ষণ-শিখন প্রক্রিয়ার শেষে শিক্ষার্থীর সামগ্রিক অর্জন নির্ণয়ের জন্য কোন মূল্যায়ন উপযোগী?", options: { A: "Formative Assessment", B: "Diagnostic Assessment", C: "Summative Assessment", D: "Informal Observation" }, ans: "C" },
+    { id: 22, q: "22. শিক্ষার্থীর কাজের গুণগত মান বিচার করার সময় শিক্ষক যদি পূর্বনির্ধারিত মানদণ্ড ব্যবহার করেন, তবে সেটি কী?", options: { A: "Norm-referenced Evaluation", B: "Criterion-referenced Evaluation", C: "Random Evaluation", D: "Informal Evaluation" }, ans: "B" },
+    { id: 23, q: "23. একজন শিক্ষার্থী নিজের আগ্রহ ও দক্ষতা অনুযায়ী বিষয় নির্বাচন করতে চাইছে। কোন ধরনের নির্দেশনা তার জন্য উপযোগী?", options: { A: "Vocational Guidance", B: "Educational Guidance", C: "Personal Guidance", D: "Social Guidance" }, ans: "B" },
+    { id: 24, q: "24. কাউন্সেলিংয়ের ক্ষেত্রে Active Listening বলতে কী বোঝায়?", options: { A: "পরামর্শদাতার নিজের মতামত চাপিয়ে দেওয়া", B: "মনোযোগ দিয়ে শোনা এবং বক্তার বক্তব্য বোঝার চেষ্টা করা", C: "শিক্ষার্থীর কথা মাঝপথে বন্ধ করা", D: "সমস্যার গুরুত্ব অস্বীকার করা" }, ans: "B" },
+    { id: 25, q: "25. একজন শিক্ষক শ্রেণিকক্ষে এমন পরিবেশ তৈরি করেন যেখানে শিক্ষার্থীরা ভুল করার ভয় ছাড়াই প্রশ্ন করতে পারে। এটি কোন বিষয়কে উৎসাহিত করে?", options: { A: "Psychological Safety", B: "Negative Reinforcement", C: "Social Isolation", D: "Rote Memorisation" }, ans: "A" },
+    { id: 26, q: "26. ‘গণেশ’ শব্দের সন্ধিবিচ্ছেদ কোনটি?", options: { A: "গণ + ঈশ", B: "গণ + ইশ", C: "গণা + ঈশ", D: "গণে + শ" }, ans: "A" },
+    { id: 27, q: "27. ‘সমুদ্র’ শব্দের সমার্থক শব্দ কোনটি?", options: { A: "সরোবর", B: "সাগর", C: "সরিতা", D: "নির্ঝর" }, ans: "B" },
+    { id: 28, q: "28. ‘অপকর্ম’ শব্দে ব্যবহৃত উপসর্গ কোনটি?", options: { A: "অপ", B: "অব", C: "অনু", D: "প্রতি" }, ans: "A" },
+    { id: 29, q: "29. ‘পাঠযোগ্য’ শব্দে ব্যবহৃত প্রত্যয় কোনটি?", options: { A: "কৃৎ প্রত্যয়", B: "তদ্ধিত প্রত্যয়", C: "স্ত্রী প্রত্যয়", D: "বিভক্তি" }, ans: "B" },
+    { id: 30, q: "30. ‘যথাশক্তি’ কোন সমাসের উদাহরণ?", options: { A: "দ্বন্দ্ব", B: "বহুব্রীহি", C: "অব্যয়ীভাব", D: "কর্মধারয়" }, ans: "C" },
+    { id: 31, q: "31. ‘শিশু মাকে ডাকল’—বাক্যে ‘মাকে’ কোন কারক?", options: { A: "কর্তৃকারক", B: "কর্মকারক", C: "করণকারক", D: "অধিকরণ কারক" }, ans: "B" },
+    { id: 32, q: "32. ‘লোভে পাপ, পাপে মৃত্যু’—এখানে ‘লোভে’ কোন কারক?", options: { A: "করণ কারক", B: "অপাদান কারক", C: "অধিকরণ কারক", D: "সম্প্রদান কারক" }, ans: "C" },
+    { id: 33, q: "33. ‘আমরা কাজটি করব’—বাক্যটির বাচ্য কী?", options: { A: "কর্তৃবাচ্য", B: "কর্মবাচ্য", C: "ভাববাচ্য", D: "কর্মকর্তৃবাচ্য" }, ans: "A" },
+    { id: 34, q: "34. ‘সে বই পড়ছিল’—বাক্যটি কোন কালের উদাহরণ?", options: { A: "সাধারণ বর্তমান", B: "ঘটমান অতীত", C: "পুরাঘটিত অতীত", D: "সাধারণ ভবিষ্যৎ" }, ans: "B" },
+    { id: 35, q: "35. ‘সূর্য উঠলে অন্ধকার দূর হয়’—গঠন অনুসারে বাক্যটি কোন ধরনের?", options: { A: "সরল বাক্য", B: "যৌগিক বাক্য", C: "জটিল বাক্য", D: "প্রশ্নবোধক বাক্য" }, ans: "C" },
+    { id: 36, q: "36. প্রাথমিক স্তরে বাংলা ভাষা শিক্ষায় ছড়া ব্যবহারের প্রধান উদ্দেশ্য কী?", options: { A: "কেবল মুখস্থ করানো", B: "ধ্বনিগত সচেতনতা, ছন্দবোধ ও ভাষার প্রতি আগ্রহ বৃদ্ধি", C: "ব্যাকরণের কঠিন নিয়ম শেখানো", D: "শিক্ষার্থীদের নীরব রাখা" }, ans: "B" },
+    { id: 37, q: "37. ভাষা শিক্ষায় শিক্ষার্থীদের শব্দভাণ্ডার বৃদ্ধির জন্য কোন কার্যক্রমটি বেশি কার্যকর?", options: { A: "বিচ্ছিন্ন শব্দের তালিকা মুখস্থ করা", B: "প্রসঙ্গের মধ্যে নতুন শব্দের অর্থ অনুমান ও ব্যবহার করা", C: "কেবল অভিধানের সংজ্ঞা লেখা", D: "প্রতিটি শব্দের ইংরেজি অনুবাদ করা" }, ans: "B" },
+    { id: 38, q: "38. বাংলা ভাষা শিক্ষায় সৃজনশীল লেখার দক্ষতা যাচাইয়ের জন্য কোন কাজটি সবচেয়ে উপযোগী?", options: { A: "অনুচ্ছেদ হুবহু নকল করা", B: "একটি ছবি দেখে নিজের ভাষায় গল্প লেখা", C: "বানানের তালিকা মুখস্থ করা", D: "পাঠ্যবইয়ের সংজ্ঞা লেখা" }, ans: "B" },
+    { id: 39, q: "39. Choose the synonym of “Reluctant”.", options: { A: "Willing", B: "Unwilling", C: "Eager", D: "Enthusiastic" }, ans: "B" },
+    { id: 40, q: "40. Choose the antonym of “Artificial”.", options: { A: "Synthetic", B: "False", C: "Natural", D: "Imitation" }, ans: "C" },
+    { id: 41, q: "41. Choose the correct one-word substitution: “A person who compiles a dictionary.”", options: { A: "Biographer", B: "Lexicographer", C: "Photographer", D: "Calligrapher" }, ans: "B" },
+    { id: 42, q: "42. Choose the correct meaning of the phrasal verb “Put off”.", options: { A: "Postpone", B: "Continue", C: "Discover", D: "Accept" }, ans: "A" },
+    { id: 43, q: "43. Choose the correct meaning of the idiom “To add fuel to the fire”.", options: { A: "To solve a problem", B: "To make a bad situation worse", C: "To stop an argument", D: "To offer help" }, ans: "B" },
+    { id: 44, q: "44. Identify the error in the following sentence: “Neither of the two boys have completed the task.”", options: { A: "Neither of", B: "the two boys", C: "have completed", D: "the task" }, ans: "C" },
+    { id: 45, q: "45. Choose the correct improvement: “She is good in mathematics.”", options: { A: "good on mathematics", B: "good at mathematics", C: "good for mathematics", D: "No improvement" }, ans: "B" },
+    { id: 46, q: "46. Fill in the blank with the appropriate preposition: “The train arrived _____ the station on time.”", options: { A: "at", B: "in", C: "on", D: "by" }, ans: "A" },
+    { id: 47, q: "47. Fill in the blank with the correct verb form: “By the time we reached the cinema, the film _____.”", options: { A: "starts", B: "has started", C: "had started", D: "will start" }, ans: "C" },
+    { id: 48, q: "48. Which activity is most effective for developing learners’ ability to understand spoken English in different real-life situations?", options: { A: "Listening to varied audio recordings and completing comprehension tasks", B: "Copying grammar rules", C: "Memorising written passages", D: "Translating isolated words" }, ans: "A" },
+    { id: 49, q: "49. In a learner-centred English classroom, the teacher should primarily act as a:", options: { A: "Strict examiner", B: "Facilitator of learning", C: "Sole source of information", D: "Controller of every response" }, ans: "B" },
+    { id: 50, q: "50. Which approach is most appropriate for assessing learners’ communicative competence in English?", options: { A: "Asking them to memorise grammar definitions", B: "Giving them meaningful speaking tasks in realistic situations", C: "Testing only spelling", D: "Asking them to copy passages from the textbook" }, ans: "B" }
+  ];
+
+  let timeInSeconds = 40 * 60; // 40 minutes timer
+  let timerInterval;
+
+  // Validation function for Bengali & English Name & 10-digit Phone
+  function validateAndStart() {
+    const nameInput = document.getElementById('student-name').value.trim();
+    const phoneInput = document.getElementById('student-phone').value.trim();
+    const nameErr = document.getElementById('name-error');
+    const phoneErr = document.getElementById('phone-error');
+
+    let isValid = true;
+
+    // Regex: English letters (a-z, A-Z) + Bengali Unicode Range (\u0980-\u09FF) + spaces only
+    const nameRegex = /^[a-zA-Z\u0980-\u09FF\s]+$/;
+    // Regex: Exactly 10 digits
+    const phoneRegex = /^[0-9]{10}$/;
+
+    if (!nameRegex.test(nameInput)) {
+      nameErr.style.display = 'block';
+      isValid = false;
+    } else {
+      nameErr.style.display = 'none';
+    }
+
+    if (!phoneRegex.test(phoneInput)) {
+      phoneErr.style.display = 'block';
+      isValid = false;
+    } else {
+      phoneErr.style.display = 'none';
+    }
+
+    if (isValid) {
+      document.getElementById('login-section').style.display = 'none';
+      document.getElementById('test-section').style.display = 'block';
+      renderQuestions();
+      startTimer();
+    }
+  }
+
+  function renderQuestions() {
+    const container = document.getElementById('questions-container');
+    container.innerHTML = '';
+
+    questions.forEach((item) => {
+      const card = document.createElement('div');
+      card.className = 'question-card';
+
+      let optionsHtml = '';
+      for (const [key, val] of Object.entries(item.options)) {
+        optionsHtml += `
+          <li>
+            <label id="lbl-${item.id}-${key}">
+              <input type="radio" name="q${item.id}" value="${key}">
+              ${key}. ${val}
+            </label>
+          </li>
+        `;
+      }
+
+      card.innerHTML = `
+        <div class="question-title">${item.q}</div>
+        <ul class="options-list">${optionsHtml}</ul>
+      `;
+      container.appendChild(card);
+    });
+  }
+
+  function startTimer() {
+    timerInterval = setInterval(() => {
+      timeInSeconds--;
+      let minutes = Math.floor(timeInSeconds / 60);
+      let seconds = timeInSeconds % 60;
+
+      document.getElementById('time-display').innerText = 
+        `${minutes < 10 ? '0' : ''}${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+
+      if (timeInSeconds <= 0) {
+        clearInterval(timerInterval);
+        alert("Time limit reached! Submitting your test automatically...");
+        submitTest();
+      }
+    }, 1000);
+  }
+
+  function submitTest() {
+    clearInterval(timerInterval);
+
+    let score = 0;
+    const form = document.getElementById('quiz-form');
+    const formData = new FormData(form);
+
+    questions.forEach(item => {
+      const userAns = formData.get(`q${item.id}`);
+      const correctAns = item.ans;
+
+      // Lock input choices post-submission
+      const radios = document.getElementsByName(`q${item.id}`);
+      radios.forEach(r => r.disabled = true);
+
+      // Scoring (+1 for correct, 0 for incorrect/unattempted)
+      if (userAns === correctAns) {
+        score++;
+      }
+
+      // Answer preview formatting: Correct = Green, Wrong attempt = Red
+      if (userAns) {
+        if (userAns === correctAns) {
+          document.getElementById(`lbl-${item.id}-${userAns}`).classList.add('opt-correct');
+        } else {
+          document.getElementById(`lbl-${item.id}-${userAns}`).classList.add('opt-wrong');
+          document.getElementById(`lbl-${item.id}-${correctAns}`).classList.add('opt-correct');
+        }
+      } else {
+        // Highlight correct answer if question was skipped
+        document.getElementById(`lbl-${item.id}-${correctAns}`).classList.add('opt-correct');
+      }
+    });
+
+    // Display summary results
+    document.getElementById('result-box').style.display = 'block';
+    document.getElementById('score-text').innerHTML = `Your Final Score: <strong>${score} / ${questions.length}</strong>`;
+    
+    // Hide sticky timer and submit button
+    document.getElementById('timer-sticky').style.display = 'none';
+    form.querySelector('button[type="button"]').style.display = 'none';
+
+    // Scroll to top so student immediately sees score
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    // Post candidate data to Google Sheets
+    sendToGoogleSheet(score);
+  }
+
+  function sendToGoogleSheet(score) {
+    if (GOOGLE_SCRIPT_URL === "YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL" || !GOOGLE_SCRIPT_URL) {
+      console.warn("Google Apps Script URL is missing or not configured.");
+      return;
+    }
+
+    const name = document.getElementById('student-name').value;
+    const phone = document.getElementById('student-phone').value;
+
+    const payload = {
+      name: name,
+      phone: phone,
+      score: score,
+      total: questions.length,
+      timestamp: new Date().toLocaleString()
+    };
+
+    fetch(GOOGLE_SCRIPT_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(payload)
+    })
+    .then(() => console.log("Data logged to Google Sheets."))
+    .catch(err => console.error("Data submission failed:", err));
+  }
+</script>
+
+</body>
+</html>
